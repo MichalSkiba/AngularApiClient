@@ -4,9 +4,29 @@
     Witaj w {{ title }}!
   </h1>
   </div>
+
 <h2>Oto kilka linków, które pomogą Ci zacząć: </h2>
 <app-nauka [hero]="hero" ></app-nauka>
 {{tasks}}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let book of books$">
+    <div class="card" style="width: 18rem;">
+      <img src="{{book.url}},{{book.url2}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ book.id }}</h5>
+        <p class="card-text">{{book.tytul}} - {{book.autor}}.</p>
+        <a href="#" class="btn btn-primary">{{book.cena}}</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+      <br/>
+<br/>
+<br/>
+
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">

@@ -11,7 +11,7 @@ export class NaukaComponent implements OnInit {
 
   informacja = 'TO co ma sie wyswieltic';
   data = new Date();
-  tablica = [1, 2, 3, 4];
+  tablica = [1, 2, 3, 4, 5, 6, 7 ];
 
   // heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
 
