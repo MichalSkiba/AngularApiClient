@@ -8,11 +8,12 @@ import {BooksService} from './books.service';
 })
 
 
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'aplikacji';
   tasks = ['dupa', 'blada', 'sie', 'polaczylo'];
   hero = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
   books$: Book[];
+  page = 1;
 
   constructor(private bookService: BooksService) {}
 

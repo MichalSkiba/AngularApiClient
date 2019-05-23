@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NaukaComponent } from './nauka/nauka.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BooksService} from './books.service';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {BooksService} from './books.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [BooksService],
   bootstrap: [AppComponent]

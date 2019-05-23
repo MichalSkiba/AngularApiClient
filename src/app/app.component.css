@@ -1,1 +1,12 @@
 
+.myPagination /deep/ .ngx-pagination .current {
+  background-color: dodgerblue;
+}
+
+.myPagination >>> .ngx-pagination .pagination-previous {
+  background-color: dodgerblue;
+}
+
+.myPagination >>> .ngx-pagination .pagination-next {
+  background-color: dodgerblue;
+}
