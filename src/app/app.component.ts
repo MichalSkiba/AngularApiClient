@@ -9,7 +9,7 @@ import {BooksService} from './books.service';
 
 
 export class AppComponent implements OnInit {
-  title = 'aplikacji';
+  title = 'Nowo powstałej Aplikacji';
   tasks = ['dupa', 'blada', 'sie', 'polaczylo'];
   hero = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
   books$: Book[];
