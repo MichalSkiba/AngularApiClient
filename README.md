@@ -1,3 +1,8 @@
+Aplikacja działa z KsiazkiREST_API_Hibernate_SpringBoot + dodane są jakies drobne widgety angularowe
+
+aplikacja w fazie testow i rozwoju
+
+
 # Naukaangular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
