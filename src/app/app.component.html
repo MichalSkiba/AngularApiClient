@@ -1,4 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
 <div style="text-align:center">
   <h1 class="text-success">
     Witaj w {{ title }}!
@@ -9,12 +12,17 @@
 <app-nauka [hero]="hero" ></app-nauka>
 {{tasks}}
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4" *ngFor="let book of books$  | paginate: {itemsPerPage: 9, currentPage: page }">
-    <div class="card" style="width: 18rem;">
+
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+
+
+<div class="container" >
+  <div class="row" id="myTable" >
+    <div class="col-sm-4"  *ngFor="let book of books$ | paginate: {itemsPerPage: 9, currentPage: page } " >
+    <div class="card" style="width: 18rem;" >
       <img  *ngIf="book.url2 === null; else noURL" src= "{{book.url}}{{book.url2}}" class="card-img-top" alt="...">
-      <div class="card-body">
+      <div class="card-body" >
         <h5 class="card-title">{{ book.id }}</h5>
         <p class="card-text">{{book.tytul}} - {{book.autor}}.</p>
         <a href="#" class="btn btn-primary">{{book.cena}} PLN</a>
@@ -31,6 +39,9 @@
 
 <br/>
 <br/>
+
+
+
 
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
