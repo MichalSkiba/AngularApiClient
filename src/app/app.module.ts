@@ -7,6 +7,8 @@ import { NaukaComponent } from './nauka/nauka.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BooksService} from './books.service';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +19,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule, Ng2SearchPipeModule, FormsModule
   ],
   providers: [BooksService],
   bootstrap: [AppComponent]

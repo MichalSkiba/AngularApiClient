@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   hero = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
   books$: Book[];
   page = 1;
+  filter: string;
 
 
   constructor(private bookService: BooksService) {}
