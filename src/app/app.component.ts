@@ -22,6 +22,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.bookService.getBook().subscribe(book => this.books$ = book);
   }
+
+  onPageChange(page: number) {
+    this.page = page;
+    window.scrollTo(0, 420 );
+  }
 }
 export interface Book {
 

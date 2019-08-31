@@ -24,4 +24,5 @@ import {FormsModule} from '@angular/forms';
   providers: [BooksService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
