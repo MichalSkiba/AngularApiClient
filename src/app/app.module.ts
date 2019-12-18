@@ -5,10 +5,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NaukaComponent } from './nauka/nauka.component';
 import {HttpClientModule} from '@angular/common/http';
-import {BooksService} from './books.service';
+
 import {NgxPaginationModule} from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {FormsModule} from '@angular/forms';
+import {BooksService} from './books.services';
 
 
 @NgModule({
