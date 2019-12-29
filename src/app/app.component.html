@@ -1,14 +1,5 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
-<div style="text-align:center">
-  <h1 class="text-success">
-    Witaj w {{ title }}!
-  </h1>
-  </div>
-
-<h2>Oto kilka linków, które pomogą Ci zacząć: </h2>
-<app-nauka [hero]="hero" ></app-nauka>
-{{tasks}}
+<p>{{metoda() | date: 'dd-MM-yyyy hh:mm:ss'}}</p>
+<br>
 
 <div id="poczatek">
 <!--  <input  class="form-control" id="myInput" type="text" placeholder="Search..">-->
@@ -16,23 +7,21 @@
   <br>
 </div>
 
-
 <pagination-controls class="myPagination" (pageChange)="page = $event "></pagination-controls>
 
 <div class="container" >
   <div class="row" id="myTable" >
-    <div class="col-sm-4"
+    <div class="column"
          *ngFor="let book of books$  | filter:filter | paginate: {itemsPerPage: 9, currentPage: page }" >
-    <div class="card" style="width: 18rem;" >
-      <img  *ngIf="book.url2 === null; else noURL" src= "{{book.url}}" class="card-img-top" alt="...">
-      <div class="card-body" >
-        <h5 class="card-title">{{ book.id }} </h5>
-        <p class="card-text">{{book.tytul}} - {{book.autor}}.</p>
-        <a href="#" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Dodaj do koszyka">{{book.cena}} PLN</a>
-        <ng-template #noURL>
-          <img   src= "{{book.url}},{{book.url2}}" class="card-img-top" alt="...">
-        </ng-template>
-      </div>
+    <div class="card" >
+      <img  *ngIf="book.url2 === null; else noURL" src= "{{book.url}}" alt="Denim Jeans" style="width:100%">
+      <ng-template #noURL>
+        <img   src= "{{book.url}},{{book.url2}}" alt="Denim Jeans" style="width:100%">
+      </ng-template>
+        <h3>{{book.tytul}}</h3>
+        <p class="price">{{book.cena}} PLN</p>
+        <p>{{book.autor}}</p>
+        <p><button>Add to Cart</button></p>
     </div>
     </div>
   </div>

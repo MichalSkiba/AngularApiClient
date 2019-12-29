@@ -11,11 +11,6 @@ export class NaukaComponent implements OnInit {
   data = new Date();
 
 
-  @Input() hero = [];
-
-  @Output()
-  eventHero = new EventEmitter<string>();
-
   constructor() {
   }
 

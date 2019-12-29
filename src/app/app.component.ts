@@ -10,9 +10,7 @@ import {BooksService} from './books.services';
 
 
 export class AppComponent implements OnInit {
-  title = 'Nowo powstałej Aplikacji';
-  tasks = ['testy', 'testy', 'testy'];
-  hero = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  data = new Date();
   books$: Book[];
   page = 1;
   filter: string;
@@ -27,6 +25,10 @@ export class AppComponent implements OnInit {
   onPageChange(page: number) {
     this.page = page;
     window.scrollTo(0, 420 );
+  }
+
+  metoda() {
+    return this.data;
   }
 }
 export interface Book {

@@ -5,7 +5,7 @@ import {Observable} from 'rxjs';
 
 @Injectable()
 export class BooksService {
-  apuUrl = 'http://localhost:8080/apib/books';
+  apuUrl = 'http://localhost:8080/api';
 
   constructor(private http: HttpClient) {}
 
