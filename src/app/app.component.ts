@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {BooksService} from './books.service';
-
 
 @Component({
   selector: 'app-root',
@@ -10,20 +8,15 @@ import {BooksService} from './books.service';
 export class AppComponent implements OnInit {
   title = 'Angular8RouterBook';
   data = new Date();
-  books$: Book[];
-  page = 1;
-  filter: string;
 
-  constructor(private bookService: BooksService) {}
+
+  constructor() {}
 
   ngOnInit(): void {
-    this.bookService.getBook().subscribe(book => this.books$ = book);
+
   }
 
-  onPageChange(page: number) {
-   this.page = page;
-   window.scrollTo(0, 420 );
-  }
+
 
   metoda() {
     return this.data;
