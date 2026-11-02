@@ -1,0 +1,37 @@
+{
+ "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+ "version": 1,
+ "projects": {
+   "angular-api-client": {
+     "projectType": "application", "root": "", "sourceRoot": "src", "prefix": "app",
+     "architect": {
+       "build": {
+         "builder": "@angular/build:application",
+         "options": {
+           "outputPath": "dist/angular-api-client",
+           "index": "src/index.html",
+           "browser": "src/main.ts",
+           "tsConfig": "tsconfig.app.json",
+           "assets": ["src/favicon.ico", {"glob":"**/*","input":"src/assets","output":"assets"},{"glob":"**/*","input":"src/image","output":"image"}],
+           "styles": ["src/styles.css"]
+         },
+         "configurations": {
+           "production": {"optimization": true, "outputHashing": "all"},
+           "development": {"optimization": false, "sourceMap": true}
+         },
+         "defaultConfiguration": "production"
+       },
+       "serve": {
+         "builder": "@angular/build:dev-server",
+         "options": {"proxyConfig": "proxy.conf.json"},
+         "configurations": {
+           "production": {"buildTarget": "angular-api-client:build:production"},
+           "development": {"buildTarget": "angular-api-client:build:development"}
+         },
+         "defaultConfiguration": "development"
+       }
+     }
+   }
+ },
+ "cli": {"analytics": false}
+}

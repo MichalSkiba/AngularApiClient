@@ -1,15 +1,22 @@
-import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Book} from './app.component';
-import {Observable} from 'rxjs';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-@Injectable()
+export interface Book {
+  id?: number;
+  tytul?: string;
+  autor?: string;
+  stron?: number;
+  cena?: number;
+  url?: string;
+  url2?: string;
+}
+
+@Injectable({providedIn:'root'})
 export class BooksService {
-  apuUrl = 'http://localhost:8080/api';
-
-  constructor(private http: HttpClient) {}
-
-  getBook(): Observable<Array<Book>> {
-    return this.http.get<Array<Book>>(this.apuUrl);
+  private readonly apiUrl = '/api';
+  constructor(private readonly http: HttpClient) {}
+  getBook(): Observable<Book[]> {
+    return this.http.get<Book[]>(this.apiUrl);
   }
 }
